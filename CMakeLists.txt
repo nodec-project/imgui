@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.15)
 
 project(imgui LANGUAGES CXX)
 
@@ -13,4 +13,8 @@ add_library(${PROJECT_NAME} STATIC
 target_include_directories(
     ${PROJECT_NAME}
     PUBLIC imgui
+)
+
+target_compile_features(
+    ${PROJECT_NAME} PUBLIC cxx_std_11
 )
